@@ -10,7 +10,10 @@ from rps_train import generate_play_data
 # play(player, kris, 1000)
 # play(player, mrugesh, 1000)
 
-generate_play_data(player, quincy, 0, 50)
+generate_play_data(player, quincy, 0, 1000)
+generate_play_data(player, abbey, 1, 1000)
+generate_play_data(player, kris, 2, 1000)
+generate_play_data(player, mrugesh, 3, 1000)
 
 # Uncomment line below to play interactively against a bot:
 # play(human, abbey, 20, verbose=True)
