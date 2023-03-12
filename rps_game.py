@@ -1,3 +1,5 @@
+# DO NOT MODIFY THIS FILE
+
 import random
 
 
@@ -6,9 +8,16 @@ def play(player1, player2, num_games, verbose=False):
     p2_prev_play = ""
     results = {"p1": 0, "p2": 0, "tie": 0}
 
+    legal_moves = ["R", "P", "S"]
+    p1_last_20_moves = ""
+    p2_last_20_moves = ""
+
     for _ in range(num_games):
         p1_play = player1(p2_prev_play)
         p2_play = player2(p1_prev_play)
+
+        # p1_last_20_moves += str(legal_moves.index(p1_play))
+        # p2_last_20_moves += str(legal_moves.index(p2_play))
 
         if p1_play == p2_play:
             results["tie"] += 1
@@ -39,6 +48,9 @@ def play(player1, player2, num_games, verbose=False):
 
     print("Final results:", results)
     print(f"Player 1 win rate: {win_rate}%")
+
+    # print(p1_last_20_moves)
+    # print(p2_last_20_moves)
 
     return (win_rate)
 

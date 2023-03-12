@@ -9,7 +9,6 @@ from rps_train import generate_play_data
 # play(player, abbey, 1000)
 # play(player, kris, 1000)
 # play(player, mrugesh, 1000)
-
 generate_play_data(player, quincy, 0, 500000)
 generate_play_data(player, abbey, 1, 500000)
 generate_play_data(player, kris, 2, 500000)
